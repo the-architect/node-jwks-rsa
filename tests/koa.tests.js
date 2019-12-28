@@ -83,7 +83,7 @@ describe('koaJwtSecret', () => {
     }));
 
     const token = createToken(privateKey, null, { sub: 'john' });
-    jwksEndpoint('http://localhost', [{ pub: publicKey, kid: '123' }]);
+    jwksEndpoint('http://localhost', [ { pub: publicKey, kid: '123' } ]);
 
     request(app.listen())
       .get('/')
@@ -105,7 +105,7 @@ describe('koaJwtSecret', () => {
     }));
 
     const token = createToken(privateKey, '456', { sub: 'john' });
-    jwksEndpoint('http://localhost', [{ pub: publicKey, kid: '123' }]);
+    jwksEndpoint('http://localhost', [ { pub: publicKey, kid: '123' } ]);
 
     request(app.listen())
       .get('/')
@@ -127,7 +127,7 @@ describe('koaJwtSecret', () => {
     }));
 
     const token = createToken(privateKey, '123', { sub: 'john' });
-    jwksEndpoint('http://localhost', [{ pub: randomPublicKey1, kid: '123' }]);
+    jwksEndpoint('http://localhost', [ { pub: randomPublicKey1, kid: '123' } ]);
 
     request(app.listen())
       .get('/')
@@ -157,7 +157,7 @@ describe('koaJwtSecret', () => {
     }));
 
     const token = createToken(privateKey, '456', { sub: 'john' });
-    jwksEndpoint('http://localhost', [{ pub: randomPublicKey1, kid: '123' }]);
+    jwksEndpoint('http://localhost', [ { pub: randomPublicKey1, kid: '123' } ]);
 
     request(app.listen())
       .get('/')
@@ -176,7 +176,7 @@ describe('koaJwtSecret', () => {
       secret: jwksRsa.koaJwtSecret({
         jwksUri: 'http://localhost/.well-known/jwks.json'
       }),
-      algorithms: ['RS256']
+      algorithms: [ 'RS256' ]
     }));
     app.use((ctx) => {
       ctx.body = ctx.state.user;
@@ -184,7 +184,7 @@ describe('koaJwtSecret', () => {
     });
 
     const token = createToken(privateKey, '123', { sub: 'john' });
-    jwksEndpoint('http://localhost', [{ pub: publicKey, kid: '123' }]);
+    jwksEndpoint('http://localhost', [ { pub: publicKey, kid: '123' } ]);
 
     request(app.listen())
       .get('/')

@@ -36,7 +36,7 @@ passport.use(
     // Validate the audience and the issuer.
     audience: audience,
     issuer: issuer,
-    algorithms: ['RS256']
+    algorithms: [ 'RS256' ]
   },
   verify)
 );

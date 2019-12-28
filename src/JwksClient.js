@@ -1,7 +1,6 @@
 import debug from 'debug';
 import request from 'request';
 
-import ArgumentError from './errors/ArgumentError';
 import JwksError from './errors/JwksError';
 import SigningKeyNotFoundError from './errors/SigningKeyNotFoundError';
 
