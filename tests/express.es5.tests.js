@@ -13,7 +13,7 @@ describe('expressJwtSecret', () => {
     let err = null;
 
     try {
-      new jwksRsa.expressJwtSecret();
+      jwksRsa.expressJwtSecret();
     } catch (e) {
       err = e;
     }

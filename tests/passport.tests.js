@@ -17,7 +17,7 @@ describe('passportJwtSecret', () => {
     let err = null;
 
     try {
-      new jwksRsa.passportJwtSecret();
+      jwksRsa.passportJwtSecret();
     } catch (e) {
       err = e;
     }
