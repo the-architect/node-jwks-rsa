@@ -49,7 +49,9 @@
     "test:js": "NODE_ENV=test mocha --require @babel/register --exit --timeout 5000 $(find ./tests -name *.tests.js)",
     "test": "npm run test:js && npm run test:ts",
     "test-watch": "NODE_ENV=test mocha --require @babel/register --exit --timeout 5000 $(find ./tests -name *.tests.js) --watch",
-    "release": "git tag $npm_package_version && git push && git push --tags && npm publish"
+    "release": "git tag $npm_package_version && git push && git push --tags && npm publish",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
