@@ -1,11 +1,5 @@
 {
   "parser": "babel-eslint",
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "generators": true,
-    "modules": true
-  },
   "rules": {
     "array-bracket-spacing": [2, "always"],
     "comma-dangle": [2, "never"],
